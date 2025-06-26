@@ -1,4 +1,3 @@
-// controllers/formController.js
 const Contact = require("../models/Contact");
 
 const submitForm = async (req, res) => {
