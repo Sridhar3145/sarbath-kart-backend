@@ -1,9 +1,9 @@
-const product = require("../models/Items");
+const Item = require("../models/Items");
 
 const addProduct = async (req, res) => {
   try {
     const { title, description, price, image } = req.body;
-    await product.create({ title, description, price, image });
+    await Item.create({ title, description, price, image });
 
     res.status(201).json({ message: "Product added successfully" });
   } catch (err) {
@@ -13,8 +13,8 @@ const addProduct = async (req, res) => {
 
 const getProducts = async (req, res) => {
   try {
-    const products = await product.find();
-    res.status(200).json(products);
+    const item = await Item.find();
+    res.status(200).json(item);
   } catch (err) {
     res.status(500).json({ error: "Failed to fetch products" });
   }
