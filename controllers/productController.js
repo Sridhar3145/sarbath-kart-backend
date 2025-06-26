@@ -1,10 +1,9 @@
-const product = require("../models/product");
 const Product = require("../models/Product");
 
 const addProduct = async (req, res) => {
   try {
     const { title, description, price, image } = req.body;
-    await product.create({ title, description, price, image });
+    await Product.create({ title, description, price, image });
 
     res.status(201).json({ message: "Product added successfully" });
   } catch (err) {
