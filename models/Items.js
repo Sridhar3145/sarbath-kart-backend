@@ -7,5 +7,5 @@ const itemSchema = new mongoose.Schema({
   image: String,
 });
 
-// 👇 Map to 'products' collection manually
+
 module.exports = mongoose.model("Item", itemSchema, "products");

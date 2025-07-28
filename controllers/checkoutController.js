@@ -23,7 +23,7 @@ const placeOrder = async (req, res) => {
 const getOrders = async (req, res) => {
   try {
     const orders = await Order.find();
-    res.status(200).json(orders); // 👈 Must respond
+    res.status(200).json(orders); 
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch orders" });
   }
